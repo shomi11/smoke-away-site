@@ -1,0 +1,104 @@
+:root {
+  --bg: #ffffff;
+  --surface: #f5f5f7;
+  --text: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #e5e5ea;
+  --accent: #c94f00;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #000000;
+    --surface: #1c1c1e;
+    --text: #f5f5f7;
+    --muted: #98989d;
+    --line: #2c2c2e;
+    --accent: #ff8a3d;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  -webkit-text-size-adjust: 100%;
+}
+
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+header.app {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+header.app img {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+}
+
+header.app a { color: inherit; text-decoration: none; }
+header.app .name { font-size: 20px; font-weight: 600; }
+header.app .by { color: var(--muted); font-size: 15px; }
+
+h1 { font-size: 34px; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.01em; }
+h2 { font-size: 22px; margin: 40px 0 8px; }
+h3 { font-size: 17px; margin: 24px 0 4px; }
+
+p, ul { margin: 0 0 14px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 6px; }
+
+a { color: var(--accent); }
+
+.updated { color: var(--muted); margin-bottom: 28px; }
+
+.summary {
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 20px 22px;
+  margin: 24px 0 8px;
+}
+
+.summary ul { margin: 0; }
+
+.links {
+  display: grid;
+  gap: 12px;
+  margin: 28px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: block;
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 16px 18px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a span { display: block; color: var(--muted); font-weight: 400; font-size: 15px; }
+
+footer {
+  border-top: 1px solid var(--line);
+  margin-top: 48px;
+  padding-top: 20px;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+footer a { color: var(--muted); }
